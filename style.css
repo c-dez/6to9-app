@@ -29,15 +29,16 @@ label{
 }
 input{
     width: 60%;
-    
-
 }
-.taskList{
+input:valid{
+    border: 2px solid green;
+}
+.list{
     grid-area: 2/1/3/2;
     background-color: red;
-    height: 100%;
+    max-height: 100vh;
     display:grid;
-    /* grid-template-rows: 1fr; */
-    grid-auto-rows: 1fr;
+    /* grid-template-rows: 1; */
+    grid-auto-rows: minmax(50px, 100px);
 
 }
