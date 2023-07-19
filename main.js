@@ -20,8 +20,20 @@ const createList = ()=>{
         let task = document.createElement('div')
         task.textContent = taskList[taskList.length -1]
         list.appendChild(task)
+        const createAddEraseBtns = ()=>{
+            let add = document.createElement('button');
+            add.textContent = 'Add'
+            add.classList.add('add')
+            list.appendChild(add)
+
+            let remove = document.createElement('button')
+            remove.textContent = 'Erase'
+            remove.classList.add('erase')
+            list.appendChild(remove)
+        }
+        createAddEraseBtns()
+
     
     
 }
 submit.addEventListener('click',addToArray)
-
