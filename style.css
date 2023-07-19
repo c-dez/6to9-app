@@ -3,7 +3,6 @@ body{
     height: 100%;
 }
 #app{
-padding-top: 10px;    
 display: grid;
 grid-template-columns: minmax(100px, 1fr) minmax(400px, 2fr);
 grid-template-rows: minmax(100px, 150px) minmax(400px, 1fr);
@@ -21,11 +20,7 @@ height: 100vh;
 
 }
 .newTask{
-    /* display: grid; */
     grid-area: 1/1/2/3;
-    /* background-color: wheat; */
-    /* display: flex; */
-    /* display:inline; */
 }
 
 
@@ -41,4 +36,8 @@ input{
     grid-area: 2/1/3/2;
     background-color: red;
     height: 100%;
+    display:grid;
+    /* grid-template-rows: 1fr; */
+    grid-auto-rows: 1fr;
+
 }
