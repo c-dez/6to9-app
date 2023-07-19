@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    height: 100%;
+}
+#app{
+padding-top: 10px;    
+display: grid;
+grid-template-columns: minmax(100px, 1fr) minmax(400px, 2fr);
+grid-template-rows: minmax(100px, 150px) minmax(400px, 1fr);
+background-color: aquamarine;
+height: 100vh;
+
+}
+.header{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-area:1/1/2/3 ;
+    align-items: center;
+    background-color: whitesmoke;
+
+}
+.newTask{
+    /* display: grid; */
+    grid-area: 1/1/2/3;
+    /* background-color: wheat; */
+    /* display: flex; */
+    /* display:inline; */
+}
+
+
+label{
+    padding-left: 20px;
+}
+input{
+    width: 60%;
+    
+
+}
+.taskList{
+    grid-area: 2/1/3/2;
+    background-color: red;
+    height: 100%;
+}
