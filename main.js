@@ -38,3 +38,23 @@ const createList = ()=>{
     
 }
 submit.addEventListener('click',addToArray)
+
+const list = document.querySelector('.list');
+const autoGenerateList = ()=>{
+    taskList.forEach((item)=>{
+        const taskItem = document.createElement('div');
+        list.appendChild(taskItem)
+        taskItem.textContent = item;
+
+        const addBtn = document.createElement('button');
+        list.appendChild(addBtn)
+        addBtn.classList.add('add')
+        addBtn.textContent = 'Add'
+
+        const eraseBtn = document.createElement('button');
+        list.appendChild(eraseBtn);
+        eraseBtn.classList.add('erase')
+        eraseBtn.textContent = 'Erase'
+    })
+}
+autoGenerateList()
