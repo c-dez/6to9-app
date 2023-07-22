@@ -1,4 +1,5 @@
-const taskList = []
+const taskList = ['ejercicio', 'trabajo','estudio', 'limpiar', 'cocinar' , 'jugar gatos','cocinar',
+'relajarme', 'leer','japones','arena gatos', 'super', 'patio','ropa','planear viaje']
 
 const submit = document.querySelector('#submit')
 

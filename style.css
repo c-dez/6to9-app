@@ -6,7 +6,7 @@ body{
 #app{
 color: white;
 display: grid;
-grid-template-columns: minmax(100px, 1fr) minmax(400px, 2fr);
+grid-template-columns: minmax(100px, 1fr) minmax(400px, 3fr);
 grid-template-rows: minmax(100px, 150px) minmax(400px, 1fr);
 background-color: ;
 height: 100vh;
@@ -21,38 +21,58 @@ margin: 10px;
     grid-template-rows: repeat(2, 1fr);
     grid-area:1/1/2/3 ;
     align-items: center;
-    background-color: #635985;
+    background-color: #393053;
+    padding-left: 5px;
 
 }
-.newTask{
+.search{
+    /* width: 80%; */
+    display: inline-block;
     grid-area: 1/1/2/3;
 }
 
 
+
 label{
-    padding-left: 20px;
+    /* padding-left: 20px; */
 }
 input{
-    width: 60%;
+    height: 1.5em;
 }
 input:valid{
     border: 2px solid green;
 }
 .list{
+    border-radius: 10px;
     grid-area: 2/1/3/2;
-    background-color: #424242;
+    background-color: #393053;
     max-height: 100vh;
     display:grid;
-    grid-template-columns: 1fr 50px 50px;
-    grid-auto-rows: minmax(50px, 70px);
+    grid-template-columns: 1fr 25px 25px;
+    grid-auto-rows: minmax(40px, 50px);
     align-items: center;
+    gap: 5px;
+    padding: 0 3px ;
 
 }
 .list>button{
     height: 2.5em;
+    border: 0px;
 }
 .list>.erase{
     background-color: #D71313;
-    border: 0px;
 
+}
+.calendar{
+    /* grid-area: 2/2/3/3 ; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+
+}
+
+.day{
+    background-color: #393053;
+    border-radius: 20px;
 }
