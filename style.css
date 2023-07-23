@@ -47,15 +47,16 @@ input:valid{
     max-height: 100vh;
     display:grid;
     grid-template-columns: 1fr 25px 25px;
-    grid-auto-rows: minmax(40px, 50px);
+    grid-auto-rows: minmax(20px, 40px);
     align-items: center;
     gap: 5px;
     padding: 0 3px ;
 
 }
 .list>button{
-    height: 2.5em;
+    height: 1.5em;
     border: 0px;
+    border-radius: 10px;
 }
 .list>.erase{
     background-color: #D71313;
