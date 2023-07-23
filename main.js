@@ -49,12 +49,15 @@ const autoGenerateList = ()=>{
         const addBtn = document.createElement('button');
         list.appendChild(addBtn)
         addBtn.classList.add('add')
-        addBtn.textContent = 'Add'
+        addBtn.innerHTML = '<img src="./icons/check-bold.png"></img>'
+        
 
         const eraseBtn = document.createElement('button');
         list.appendChild(eraseBtn);
         eraseBtn.classList.add('erase')
-        eraseBtn.textContent = 'Erase'
+        eraseBtn.textContent = ''
+        eraseBtn.innerHTML = '<img src="./icons/cancel.png"></img>'
+
     })
 }
 autoGenerateList()
