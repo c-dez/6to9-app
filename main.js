@@ -24,13 +24,7 @@ const createList = ()=>{
 
         list.appendChild(createAddBtn())
         list.appendChild(createEraseBtn())
-
-       
-
-    
-    
 }
-submit.addEventListener('click',addToArray)
 
 function createAddBtn(){
     const addBtn = document.createElement('button');
@@ -38,7 +32,7 @@ function createAddBtn(){
     addBtn.innerHTML = '<img src="./icons/check-bold.png"></img>'
     addBtn.style.backgroundColor = 'green'
     return addBtn
-
+    
 }
 
 function createEraseBtn(){
@@ -47,7 +41,7 @@ function createEraseBtn(){
     eraseBtn.innerHTML = '<img src="./icons/cancel.png"></img>'
     eraseBtn.style.backgroundColor = 'red'
     return eraseBtn;
-
+    
 }
 
 const list = document.querySelector('.list');
@@ -56,15 +50,19 @@ const autoGenerateList = ()=>{
         const taskItem = document.createElement('div');
         list.appendChild(taskItem)
         taskItem.textContent = item;
-
         
-        list.appendChild(createAddBtn())//
-       
+        
+        list.appendChild(createAddBtn())
+        
         
         list.appendChild(createEraseBtn())
-       
+        
 
     })
 }
+submit.addEventListener('click',addToArray)
 autoGenerateList()
-
+//quiero addEvent a el primer button .add, y que el text content 'ejercicio' 
+//se pase a todo, pero los scopes entan mal
+//estoy mal desde bastante atras
+//creo que es mas facil re hacer que cambiar la logica desde este punto
