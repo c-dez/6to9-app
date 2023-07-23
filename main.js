@@ -21,23 +21,34 @@ const createList = ()=>{
         let task = document.createElement('div')
         task.textContent = taskList[taskList.length -1]
         list.appendChild(task)
-        const createAddEraseBtns = ()=>{
-            let add = document.createElement('button');
-            add.textContent = 'Add'
-            add.classList.add('add')
-            list.appendChild(add)
 
-            let remove = document.createElement('button')
-            remove.textContent = 'Erase'
-            remove.classList.add('erase')
-            list.appendChild(remove)
-        }
-        createAddEraseBtns()
+        list.appendChild(createAddBtn())
+        list.appendChild(createEraseBtn())
+
+       
 
     
     
 }
 submit.addEventListener('click',addToArray)
+
+function createAddBtn(){
+    const addBtn = document.createElement('button');
+    addBtn.classList.add('add')
+    addBtn.innerHTML = '<img src="./icons/check-bold.png"></img>'
+    addBtn.style.backgroundColor = 'green'
+    return addBtn
+
+}
+
+function createEraseBtn(){
+    const eraseBtn = document.createElement('button')
+    eraseBtn.classList.add('erase')
+    eraseBtn.innerHTML = '<img src="./icons/cancel.png"></img>'
+    eraseBtn.style.backgroundColor = 'red'
+    return eraseBtn;
+
+}
 
 const list = document.querySelector('.list');
 const autoGenerateList = ()=>{
@@ -46,18 +57,14 @@ const autoGenerateList = ()=>{
         list.appendChild(taskItem)
         taskItem.textContent = item;
 
-        const addBtn = document.createElement('button');
-        list.appendChild(addBtn)
-        addBtn.classList.add('add')
-        addBtn.innerHTML = '<img src="./icons/check-bold.png"></img>'
         
-
-        const eraseBtn = document.createElement('button');
-        list.appendChild(eraseBtn);
-        eraseBtn.classList.add('erase')
-        eraseBtn.textContent = ''
-        eraseBtn.innerHTML = '<img src="./icons/cancel.png"></img>'
+        list.appendChild(createAddBtn())//
+       
+        
+        list.appendChild(createEraseBtn())
+       
 
     })
 }
 autoGenerateList()
+

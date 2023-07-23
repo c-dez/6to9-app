@@ -7,7 +7,7 @@ body{
 color: white;
 display: grid;
 grid-template-columns: minmax(100px, 1fr) minmax(400px, 3fr);
-grid-template-rows: minmax(100px, 150px) minmax(400px, 1fr);
+grid-template-rows: 100px minmax(400px, 1fr);
 /* background-color: ; */
 height: 100vh;
 gap: 20px;
@@ -18,7 +18,7 @@ margin: 10px;
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 100px;
     grid-area:1/1/2/3 ;
     align-items: center;
     background-color: #393053;
@@ -58,16 +58,12 @@ input:valid{
     border: 0px;
     border-radius: 10px;
 }
-.list>.erase{
-    background-color: #D71313;
-    
 
-}
 .calendar{
     /* grid-area: 2/2/3/3 ; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
     gap: 15px;
 
 }
@@ -87,9 +83,7 @@ input:valid{
 .add>img{
     width: 10px;
 }
-.add{
-    background-color: green;
-}
+
 .erase>img{
     width: 10px;
 }
